@@ -5,11 +5,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //String archivo1 = args[0];
-        //String archivo2 = args[1];
+        String archivo1 = args[0];
+        String archivo2 = args[1];
 
-        String archivo1 = "texto1.txt";
-        String archivo2 = "texto2.txt";
+        //String archivo1 = "texto1.txt";
+        //String archivo2 = "texto2.txt";
 
         // Lee archivos
         Lector lector1 = new Lector(archivo1);
