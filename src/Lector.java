@@ -1,8 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.InputStreamReader;
-import java.nio.charset.Charset;
 import java.util.*;
 
 /**
@@ -34,11 +32,15 @@ public class Lector {
     public void crearConjunto(){
         try {
             this.lineaActual = this.texto.readLine();
-            //Charset.forName("UTF-8").encode(this.lineaActual);
+            int error = 0;
 
             while (this.lineaActual != null) {
-                if(!this.conjunto.add(this.lineaActual))
-                    //System.out.println(this.nombreArchivo + " -> " + this.lineaActual);
+                if(!this.conjunto.add(this.lineaActual)) {
+                    error++;
+                    if(error == 1)
+                        System.out.println("No se pudo agregar las siguientes lineas de " + this.nombreArchivo + " :");
+                    System.out.println(this.lineaActual);
+                }
                 this.lineaActual = this.texto.readLine();
             }
 
@@ -48,6 +50,8 @@ public class Lector {
             System.out.println("Error al leer de " + this.nombreArchivo + ".");
         }
     }
+
+    public String getNombreArchivo(){ return this.nombreArchivo; }
 
     public Set<String> getConjunto(){
         return this.conjunto;

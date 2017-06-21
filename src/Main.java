@@ -31,12 +31,12 @@ public class Main {
         double jaccardCoefficient = 1.0 * interseccion / union.size();
         double jaccardDistance = 1 - jaccardCoefficient;
 
-        System.out.println("\nCardinalidad texto 1: " + lector1.getCardinalidad());
-        System.out.println("Cardinalidad texto 2: " + lector2.getCardinalidad());
+        System.out.println("\nCardinalidad " + lector1.getNombreArchivo() + " : " + lector1.getCardinalidad());
+        System.out.println("Cardinalidad " + lector2.getNombreArchivo() + " : " + lector2.getCardinalidad());
         System.out.println("Cardinalidad intersección: " + interseccion);
         System.out.println("Cardinalidad unión: " + union.size());
-        System.out.println("\nSimilitud Jaccard: " + jaccardCoefficient + " %");
-        System.out.println("Disimilitud Jaccard: " + jaccardDistance + " %");
+        System.out.println("\nSimilitud Jaccard: " + jaccardCoefficient*100 + " %");
+        System.out.println("Disimilitud Jaccard: " + jaccardDistance*100 + " %");
 
         // /System.out.println("Hello World!");
     }
