@@ -4,4 +4,4 @@ Similitud (coeficiente) y Disimilitud (distancia) de Jaccard entre dos conjuntos
 Para correr el jar ubicado en \out\artifacts\Jaccard_jar\Jaccard.jar:
 
 
-java -jar Jaccard.jar [nombreArchivo1.txt] [nombreArchivo2.txt]
+java -jar Jaccard.jar [rutaArchivo1.txt] [rutaArchivo2.txt]
