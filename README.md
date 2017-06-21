@@ -1,5 +1,5 @@
 # Jaccard
-Coeficiente y Distancia de Jaccard entre dos conjuntos de muestra.
+Similitud (coeficiente) y Disimilitud (distancia) de Jaccard entre dos conjuntos de muestra.
 
 Para correr el jar ubicado en \out\artifacts\Jaccard_jar\Jaccard.jar:
 
