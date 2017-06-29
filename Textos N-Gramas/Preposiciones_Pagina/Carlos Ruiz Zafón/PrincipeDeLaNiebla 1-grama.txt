@@ -1,0 +1,15 @@
+﻿de
+en
+a
+por
+del
+al
+para
+sobre
+sin
+con
+hasta
+max
+desde
+durante
+entre

@@ -1,15 +1,14 @@
 import java.io.*;
 import java.util.*;
 
+import static java.lang.Math.sqrt;
+
 public class Main {
 
     public static void main(String[] args) {
 
         String archivo1 = args[0];
         String archivo2 = args[1];
-
-        //String archivo1 = "texto1.txt";
-        //String archivo2 = "texto2.txt";
 
         // Lee archivos
         Lector lector1 = new Lector(archivo1);
@@ -30,14 +29,12 @@ public class Main {
         // Jaccard
         double jaccardCoefficient = 1.0 * interseccion / union.size();
         double jaccardDistance = 1 - jaccardCoefficient;
+        double cosineDistance = interseccion / sqrt(lector1.getCardinalidad() * lector2.getCardinalidad());
+        double cosineDistanceD = 1 - cosineDistance;
 
-        System.out.println("\nCardinalidad " + lector1.getNombreArchivo() + " : " + lector1.getCardinalidad());
-        System.out.println("Cardinalidad " + lector2.getNombreArchivo() + " : " + lector2.getCardinalidad());
-        System.out.println("Cardinalidad intersección: " + interseccion);
-        System.out.println("Cardinalidad unión: " + union.size());
         System.out.println("\nSimilitud Jaccard: " + jaccardCoefficient*100 + " %");
         System.out.println("Disimilitud Jaccard: " + jaccardDistance*100 + " %");
-
-        // /System.out.println("Hello World!");
+        System.out.println("\nSimilitud Distancia Cosenos: " + cosineDistance*100 + " %");
+        System.out.println("Disimilitud Distancia Cosenos: " + cosineDistanceD*100 + " %");
     }
 }
